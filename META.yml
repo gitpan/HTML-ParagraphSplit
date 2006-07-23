@@ -1,0 +1,19 @@
+---
+name: HTML-ParagraphSplit
+version: 0.01
+author:
+  - 'Andrew Sterling Hanenkamp, E<lt>hanenkamp@cpan.orgE<gt>'
+abstract: Change text containing HTML into a formatted HTML fragment
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  HTML::Tree: 0
+provides:
+  HTML::ParagraphSplit:
+    file: lib/HTML/ParagraphSplit.pm
+    version: 0.01
+generated_by: Module::Build version 0.28
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
