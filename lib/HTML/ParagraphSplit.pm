@@ -3,7 +3,7 @@ package HTML::ParagraphSplit;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 require Exporter;
 
@@ -11,6 +11,7 @@ our @ISA = qw( Exporter );
 
 our @EXPORT_OK = qw( split_paragraphs split_paragraphs_to_text );
 
+use HTML::TreeBuilder;
 use HTML::Tagset;
 
 use vars qw( %p_content );

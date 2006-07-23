@@ -6,7 +6,6 @@ use warnings;
 use Test::More tests => 6;
 require 't/helper.pl';
 
-use HTML::TreeBuilder;
 use HTML::ParagraphSplit qw( split_paragraphs_to_text );
 
 my @filenames = qw(

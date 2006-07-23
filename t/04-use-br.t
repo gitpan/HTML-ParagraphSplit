@@ -7,7 +7,6 @@ require 't/helper.pl';
 use Test::More tests => 2;
 
 use HTML::ParagraphSplit qw( split_paragraphs_to_text );
-use HTML::TreeBuilder;
 
 my $got = split_paragraphs_to_text(
     slurp('t/corpus/use-br.txt'), {
