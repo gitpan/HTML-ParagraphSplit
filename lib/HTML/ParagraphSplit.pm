@@ -3,7 +3,7 @@ package HTML::ParagraphSplit;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 require Exporter;
 
@@ -194,7 +194,11 @@ sub _split_paragraphs_phrases {
     # If there's only one paragraph and we're not allowed to P without a break,
     # push the text back in and skip paragraphification.
     if ($options->{p_on_breaks_only} && @paragraphs == 1) {
-        $h->push_content(@paragraphs);
+        my $parsed_paragraph = _nice_tree_builder();
+        $parsed_paragraph->parse($paragraphs[0]);
+        $parsed_paragraph->eof;
+
+        $h->push_content($parsed_paragraph->guts);
         return;
     }
 
